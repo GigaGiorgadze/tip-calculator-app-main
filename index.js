@@ -1,10 +1,3 @@
-// const bill = prompt("enter bill amout pls")
-// const perc = prompt('enter percentage pls')
-// const persons = prompt('amout of persons')
-// let test = bill * perc
-// let test1 = Number(test)+Number(bill)
-// let test2 = test1/persons
-// console.log(test2)
 
 const form  = document.querySelector('form')
 const percDiv = document.querySelector('.perc')
