@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+  <img src="./images/logo.svg" alt="">
+  <form>
+    <div class="right">
+      <label for="bill">bill</label>
+    <input id="bill" step="any" placeholder="0" type="number">
+    <label for="">
+      Select tip %
+    </label>    
+    <div class="perc">
+    <button  type="button" id="five" class="checked" value="5">5%</button>
+    <button type="button" id="ten" value="10">10%</button>
+    <button  type="button"id="fiften" value="15">15%</button>
+    <button  type="button"id="twentyFive" value="25">25%</button>
+    <button type="button" id="fifty" value="50">50%</button>
+    <input type="number" id="costum" placeholder="COSTUM">
+    </div>
+    <label for="">Number of people</label>
+    <input type="text" id="people" placeholder="0">
+    </div>
+    <div class="left">
+          
+    <div class="row"><div class="col"><span>Tip amout</span><span>/ Person</span></div> <span id="tipPer">$0.00</span></div>
+    
+    <div class="row"><div class="col"><span>Total</span> <span>/ Person</span></div> <span id="totalPer">$0.00</span></div>
+    
+      <div class="btnDiv">
+        <i>please fill out every field</i>
+        <input type="submit" title="please fill out every field" id="submit" value="RESET">
+      </div>
+    </div>
+  </form>
+    
+</div>
+<footer>
+ <p> made by <a href="https://github.com/GigaGiorgadze">Giga Giorgadze</a> with <img src="./images/heart-solid.svg" alt=""></p>
+</footer>
+ <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+.checked{
+    box-sizing: border-box;
+    background-color: hsl(172, 46%, 65%);
+}
+input.checked{
+    border: 2px solid hsl(172, 74%, 62%);
+    background-color: unset;
+}
+input:focus{
+    border: 2px solid hsl(172, 74%, 62%);
+}
+input:hover{
+    cursor: pointer;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  hsl(185, 41%, 84%);
+}
+*{
+    font-family: 'Space Mono', monospace;
+    font-size: 17px
+
+}
+.main{
+    margin: 10vh auto;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    padding: 2%;
+    border-radius: 30px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 400px;
+    height: 350px;
+    box-sizing: border-box;
+    padding: 5%;
+}
+form input{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.right>input{
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    text-align: end;
+
+}
+.right>input:last-of-type{
+    background-image: url('./images/icon-person.svg');
+}
+form input::placeholder{
+    color: hsl(183, 100%, 15%);
+    text-align: end;
+}
+form button{
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    color: white;
+}
+form label{
+    margin-top: 5%;
+}
+form label:first-of-type{
+    margin: 0;
+}
+.main>img{
+    margin-bottom: 70px;
+}
+.perc{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.perc>*{
+    width: 100px;
+    box-sizing: border-box;
+    margin: 1%;
+    height: 40px;
+}
+.perc>*:hover{
+    cursor: pointer;
+}
+.perc>input{
+    display: inline;
+
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    padding: 4%;
+    padding-top: 0;
+    box-sizing: border-box;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.row>span{
+    color: hsl(172, 67%, 45%);
+    font-size: 35px;
+}
+.col>span:first-of-type{
+    color: hsl(189, 41%, 97%);
+    font-size: 15px;
+}
+.col>span:last-of-type{
+    color: hsl(184, 14%, 56%);
+    font-size: 13px;
+}
+.btnDiv{
+    margin-top: auto;
+    text-align: end;
+}
+i{
+    color: rgb(236, 49, 49);
+    font-size: 16px;
+    font-style: normal;
+    font-family: sans-serif;
+    display: none;
+}
+#submit{
+    height: 40px;
+    background-color: hsl(172, 67%, 45%);
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: hsl(172, 65%, 70%);
+}
+.disabled{ 
+    cursor: not-allowed !important;
+    background-color: hsl(183, 89%, 25%) !important;
+    color: hsl(183, 94%, 13%);
+}
+label{
+    color: hsl(186, 14%, 43%);
+}
+@media screen and (min-width: 2000px) {
+    .right,.left{
+        width: 600px;
+        height: 700px;
+    }
+    input::placeholder{
+        font-size: 30px;
+    }
+    input{
+        background-size: 5%;
+        font-size: 30px;
+    }
+    label{
+        font-size: 40px;
+    }
+    .perc>*{
+        width: 150px;
+        height: 70px;
+        font-size: 30px;
+    }
+    .perc>input::placeholder{
+        text-align: center;
+        font-size: 30px;
+    }
+    form label{
+        margin-top: 15%;
+    }
+    form label:first-of-type{
+        margin: 0;
+    }
+    .col>span:first-of-type{
+        font-size: 30px !important;
+    }
+    .col>span:last-of-type{
+        font-size: 17px;
+    }
+    #submit{
+        height: 100px;
+    }
+    i{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:420px){
+    .right,.left{
+        width: 300px;
+    }
+    .perc>*{
+        width: 70px;
+    }
+}
+footer{
+    margin: auto;
+    text-align: center;
+   
+}
+footer *{
+    font-size: 2vh !important;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer img{
+    width: 2vh;
+}
