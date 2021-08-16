@@ -1,4 +1,4 @@
-
+// selecting items from HTML
 const form  = document.querySelector('form')
 const percDiv = document.querySelector('.perc')
 const five = document.querySelector('#five')
@@ -14,6 +14,7 @@ const totalPer = document.querySelector('#totalPer')
 const inputs = document.querySelectorAll('input')
 const submit = document.querySelector('#submit')
 const i = document.querySelector('i')
+// this handles button unchecking when u check new button and it also handles new button getting checked 
 percDiv.childNodes.forEach(btn => {
     btn.addEventListener('click', (e) =>{
         if(five.className == 'checked' || ten.className == 'checked' || fiften.className == 'checked' || twentyFive.className == 'checked' || fifty.className == 'checked' || costum.className == 'checked'){
@@ -27,6 +28,18 @@ percDiv.childNodes.forEach(btn => {
          }
     })
 })
+
+const math = (checked) => {    
+    let first = Number(checked) / 100
+    let second = Number(billInput.value) * first
+    let third = Number(second) + Number(billInput.value)
+    let forth = third/ Number(people.value)
+    let tipPerPerson = second/Number(people.value)
+    tipPer.innerText = `${(Math.floor(tipPerPerson * 100) / 100).toFixed(2)}`
+    totalPer.innerText = `${(Math.floor(forth * 100) / 100).toFixed(2)}`
+}
+// this listens for form submit and then checks if one of the fields is empty and if it is it doesn't let user submit the form and displays error messeage
+// and at the end calls math function which calculates and displays all the numbers
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     if(billInput.value == '' || people.value == ''){
@@ -36,24 +49,12 @@ form.addEventListener('submit', (e)=>{
         submit.className = ''
         const checked = document.querySelector('.checked')
         i.style.display = 'none'
-    console.log(checked.value)
-    console.log(billInput.value)
-    console.log(people.value)
-    let first = Number(checked.value) / 100
-    let second = Number(billInput.value) * first
-    let third = Number(second) + Number(billInput.value)
-    let forth = third/ Number(people.value)
-    let tipPerPerson = second/Number(people.value)
-    console.log(`first ${first}`)
-    console.log(`second ${second}`)
-    console.log(`third ${third}`)
-    console.log(`forth ${forth}`)
-    tipPer.innerText = `${(Math.floor(tipPerPerson * 100) / 100).toFixed(2)}`
-    totalPer.innerText = `${(Math.floor(forth * 100) / 100).toFixed(2)}`
+        math(checked.value)
     }
     
     
 })
+// gives submit button disabled if user emptys line after typing something in
 inputs.forEach(input => input.addEventListener('change', () => {
     if(billInput.value == '' || people.value == ''){
         submit.className ='disabled'
@@ -61,6 +62,7 @@ inputs.forEach(input => input.addEventListener('change', () => {
         submit.className = ''
     }
 }))  
+// sets class of submit button to disabled for it to give darker look on load
 if(billInput.value == '' || people.value == ''){
     submit.className ='disabled'
 }
